@@ -2,187 +2,173 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-  display:flex;
-}
+.wrapper {
 
-.sidebar{
-  width:300px;
-  min-height:100vh;
-  background-color: #2f3e51;
-}
+  .sidebar {
+    width:300px;
+    min-height: 100vh;
+    background-color: #2f3e51;
+    float: left;
+    color: white;
+    &__top {
+      background-color: #253141;
+      height:100px;
+      display:flex;
+      align-items: center;
+      text-align: left;
+      justify-content:center;
+      line-height: 20px;
+      &__user {
+        height: 20px;
+        width: 200px;
+        font-size:16px;
+        font-weight: bold;
+      }
+      &__icon {
+        width:60px;
+        height:20px;
+        text-align: right;
+        .icon__config {
+          text-decoration: none;
+          color: white;
+          font-size:14px;
+        }   
+        .icon__edit {
+          text-decoration: none;
+          color: white;
+          font-size:14px;
+        }
+      }
+    }
+    &__groups{
+      height: calc(100vh - 100px);
+      text-decoration: none;
+      color: #ffffff;
+      padding: 20px;
+      &__group{
+        overflow: scroll;
+        height:calc(100vh - 100px);
+        text-decoration: none;    
+        &__name{
+          margin-bottom: 5px;
+          font-size: 15px;
+          text-decoration: none;
+        }
+        &__message{
+          font-size: 11px;
+          text-decoration: none;
+        }    
+      }
+    }
+  }
 
-.sidebar__top{
-  background-color: #253141;
-  height:100px;
-  display:flex;
-  align-items: center;
-  text-align: left;
-  justify-content:center;
-  line-height: 20px;
-}
+  .main {
+    width:calc(100vw - 300px);
+    float: left;
+    height: calc(100vh - 100px - 90px);
+    &__header {
+      height:100px;
+      padding: 0 40px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      display:flex;
+      justify-content: space-between;
+      &__information {
+        align-self: end;
+        &__name {
+          color:#333333;
+          font-size:20px;
+          margin-top: 35px;
+          align-items: center;
+        }
+        &__member {
+          color: #999999;
+          font-size:12px;
+          margin-top: 15px;
+        }
+      }
+    }
+      .group__information__edit {
+        height: 40px;
+        padding: 0 20px;
+        font-size: 16px;
+        color: #38aef0;
+        margin-top: 30px;
+        margin-right: 40px;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        border: 1px solid #38aef0;
+      }
+    
 
-.sidebar__top__user{
-  color: white;
-  height: 20px;
-  width: 200px;
-  font-size: 16px;
-}
-
-.sidebar__top__icon{
-  width:60px;
-  height:20px;
-  text-align: right;
-}
-
-.icon__config{
-  text-decoration: none;
-  color: white;
-  margin-left: 5px;
-  font-size: 14px;
-}
-
-.icon__edit{
-  text-decoration: none;
-  color: white;
-  font-size:14px;
-}
-
-.group{
-  overflow: hidden;
-  color:#ffffff;
-}
-
-.group__name{
-  margin: 20px 20px 5px;
-  font-size: 15px;
-}
-
-.group__message{
-  font-size: 11px;
-  margin: 0 20px 40px;
-}
-
-.main{
-  background-color:#fafafa;
-  width:calc(100vw - 300px);
-  display:flex;
-  flex-direction: column;
-}
-
-.main__header{
-  height:100px;
-  background-color:#ffffff;
-  border-bottom: 1px solid #eeeeee;
-  display:flex;
-  justify-content: space-between;
-}
-
-.group__infomation{
-  align-self: flex-start;
-}
-
-.group__infomation__name{
-  color:#333333;
-  font-size:20px;
-  margin: 35px 0 15px 40px;
-}
-
-.group__information__member{
-  color:#999999;
-  font-size:12px;
-  margin-left:40px;
-}
-
-.group__header__edit{
-  height:40px;
-  width:72px;
-  font-size: 16px;
-  color:#38aef0;
-  margin-top:28px;
-  margin-right:40px;
-  text-align: center;
-  line-height: 40px;
-  text-decoration: none;
-  border: 1px solid #38aef0;
-}
-
-.main__center{
-  background-color:#fafafa;
-  width:calc(100vw - 300px);
-  height:calc(100vh - 100px -90px);
-}
-
-.chat__contents{
-  margin-top:35px;
-  margin-left:40px;
-}
-
-.chat__content{
-  margin-bottom: 46px;
-}
-
-.chat__content__info{
-display: flex;
-margin-bottom:12px
-}
-
-.chat__content__user{
-  color: #333333;
-  font-size: 16px;
-}
-
-.chat__content__day{
-  color: #999999;
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-.chat__content__message{
-  color: #434a54;
-  font-size: 14px;
-}
-
-.main__footer{
-  height:90px;
-  background-color:#d2d2d2;
-  margin-top: auto;
-  display:flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.input-form{
-  height: 50px;
-  margin-left: 40px;
-  display: flex;
-  background-color: white;
-  width: 100%;
-  position: relative;
-}
-
-.form__message{
-  position: relative;
-  width: 100%;
-  border-style: none;
-  padding: 0 40px 0 10px;
- }
-
-.form__picture{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  display:none;
- } 
-
-.form-button{
-  width: 100px;
-  height: 50px;
-  padding: 0 30px;
-  margin: 0 40px 0 15px;
-  background-color: #38aef0;
-  color: white;
-  line-height: 50px;
+    &__center {
+      padding:35px 40px 0;
+      box-sizing: border-box;
+      background-color:#fafafa;
+      height:calc(100vh - 100px - 90px);
+      overflow: scroll;
+      &__chatcontents {
+        &__content {
+          margin-bottom: 46px;
+          &__info {
+            display: flex;
+            margin-bottom:12px;
+            &__user {
+              color: #333333;
+              font-size: 16px;
+            }
+            &__day {
+              color: #999999;
+              font-size: 12px;
+              padding-left: 10px;
+            }
+          &__message {
+            color: #434a54;
+            font-size: 14px;
+          }
+          }
+        }
+      }
+    }
+    &__footer {
+      height:90px;
+      background-color:#d2d2d2;
+      padding: 20px 50px 20px 40px;
+      display: flex;
+      box-sizing: border-box;
+      &__input-form {
+        height: 50px;
+        background-color: white;
+        width: 100%;
+        position: relative;
+        .message {
+          width: 100%;
+          border: none;
+          padding: 0 45px 0 15px;
+          height: 50px;
+        }
+          .fa-image {
+            position: absolute;
+            font-size: 25px;
+            line-height: 50px;
+            color: black;
+            right: 15px;
+          }
+          .form__picture{
+            display:none;
+          }
+      }
+      &__form-button {
+        background-color: #38aef0;
+        border: none;
+        color: white;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+        line-height: 50px;
+      }
+    }
+  }
 }

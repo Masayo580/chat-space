@@ -1,28 +1,23 @@
 .main
   .main__header
-    .group__infomation
-      .group__infomation__name test
-      .group__information__member Member : masayo
-    =link_to "#" ,class:"group__header__edit" do
+    .main__header__information
+      .main__header__information__name test
+      .main__header__information__member Member : masayo
+    =link_to "#" ,class:"group__information__edit" do
       Edit
 
   .main__center
-    .chat__contents
-      .chat__content
-        .chat__content__info 
-          .chat__content__user 菊池雅世
-          .chat__content__day 2020年09月11日17時39分
-        .chat__content__message みなさん元気ですか。
+    .main__center__chatcontents
+      .main__center__chatcontents__content
+        .main__center__chatcontents__content__info 
+          .main__center__chatcontents__content__info__user 菊池雅世
+          .main__center__chatcontents__content__info__day 2020年09月11日17時39分
+        .main__center__chatcontents__content__message みなさん元気ですか。
       
   .main__footer
-    .input-form
-
-      -# .form__message type a message
-      %input.form__message{placeholder: "type a message"}
-      %label{class: "picture-label"} 
-        -# %i.far.fa-image.form__picture
+    .main__footer__input-form
+      %input.message{placeholder: "type a message"}
+      %label{class: "picture-label"}
+        %i.far.fa-image
         %input.form__picture{type: "file"} 
-        %i.far.fa-image.form__picture
-      -# .form__picture 
-      -#   %i.far.fa-image
-    .form-button Send 
+    .main__footer__form-button Send
