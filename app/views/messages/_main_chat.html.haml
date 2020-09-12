@@ -1,0 +1,23 @@
+.main
+  .main__header
+    .main__header__information
+      .main__header__information__name test
+      .main__header__information__member Member : masayo
+    =link_to "#" ,class:"group__information__edit" do
+      Edit
+
+  .main__center
+    .main__center__chatcontents
+      .main__center__chatcontents__content
+        .main__center__chatcontents__content__info 
+          .main__center__chatcontents__content__info__user 菊池雅世
+          .main__center__chatcontents__content__info__day 2020年09月11日17時39分
+        .main__center__chatcontents__content__message みなさん元気ですか。
+      
+  .main__footer
+    .main__footer__input-form
+      %input.message{placeholder: "type a message"}
+      %label{class: "picture-label"}
+        %i.far.fa-image
+        %input.form__picture{type: "file"} 
+    .main__footer__form-button Send
