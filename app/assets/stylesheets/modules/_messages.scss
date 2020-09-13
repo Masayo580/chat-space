@@ -114,8 +114,9 @@
       height:calc(100vh - 100px - 90px);
       overflow: scroll;
       &__chatcontents {
+        margin-bottom: 46px;
         &__content {
-          // margin-bottom: 46px;
+          
           &__info {
             display: flex;
             margin-bottom:12px;
