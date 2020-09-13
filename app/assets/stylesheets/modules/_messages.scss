@@ -47,7 +47,6 @@
       padding: 20px;
       &__group{
         overflow: scroll;
-        height:calc(100vh - 100px);
         text-decoration: none;    
         &__name{
           margin-bottom: 5px;
@@ -58,6 +57,9 @@
           font-size: 11px;
           text-decoration: none;
         }    
+        a{
+          color: white;
+        }
       }
     }
   }
