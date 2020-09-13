@@ -1,10 +1,11 @@
 .sidebar
   .sidebar__top 
-    .sidebar__top__user masayo
+    .sidebar__top__user
+      = current_user.name
     .sidebar__top__icon
-      =link_to "#" , class: "icon__edit" do
-        %i.fa.fa-edit 
-      =link_to "#" , class: "icon__config" do
+      = link_to "#" , class: "icon__edit" do
+        %i.fa.fa-edit
+      = link_to edit_user_path(current_user), class: "icon__config" do
         %i.fa.fa-cog 
 
   .sidebar__groups
