@@ -1,4 +1,4 @@
-.main__center__chatcontents
+.main__center__chatcontents{data: {message: {id: message.id}}}
   .main__center__chatcontents__content
     .main__center__chatcontents__content__info 
       .main__center__chatcontents__content__info__user
@@ -10,5 +10,4 @@
       %p.Message__content
         = message.content
     = image_tag message.image.url, class: 'Message__image' if message.image.present?
-
 
