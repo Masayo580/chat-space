@@ -109,7 +109,6 @@
 
     &__center {
       padding:35px 40px 0;
-      box-sizing: border-box;
       background-color:#fafafa;
       height:calc(100vh - 100px - 90px);
       overflow: scroll;
@@ -135,7 +134,12 @@
             }
           }
         }
+        .Message__image {
+          height: 300px;
+          width: 450px;
+        }
       }
+      
     }
     &__footer {
       height:90px;
